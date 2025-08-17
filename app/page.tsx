@@ -174,7 +174,7 @@ export default function TherapyWebsite() {
             <div className="flex-1 flex justify-center">
               <div className="relative">
                 <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl">
-                  <img src="/therapist-portrait.png" alt="Dr. Lisa Wright" className="w-full h-full object-cover" />
+                  <img src="/dr-wright-headshot.jpg" alt="Dr. Lisa Wright" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center">
                   <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center">
@@ -216,7 +216,11 @@ export default function TherapyWebsite() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg">
-                <img src="/therapist-office.png" alt="Therapy office" className="w-full h-full object-cover" />
+                <img
+                  src="/dr-wright-headshot.jpg"
+                  alt="Dr. Lisa Wright in her office"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="space-y-6">
