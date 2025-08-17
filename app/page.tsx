@@ -32,7 +32,7 @@ export default function TherapyWebsite() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold text-teal-700">Dr. Naomi Edelson</div>
+            <div className="text-2xl font-bold text-teal-700">Dr. Lisa Wright</div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
@@ -40,13 +40,13 @@ export default function TherapyWebsite() {
                 onClick={() => scrollToSection("home")}
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                Home
+                Welcome
               </button>
               <button
                 onClick={() => scrollToSection("about")}
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                About
+                About Me
               </button>
               <button
                 onClick={() => scrollToSection("services")}
@@ -55,10 +55,22 @@ export default function TherapyWebsite() {
                 Services
               </button>
               <button
+                onClick={() => scrollToSection("resources")}
+                className="text-gray-700 hover:text-teal-600 transition-colors"
+              >
+                Resources
+              </button>
+              <button
+                onClick={() => scrollToSection("faq")}
+                className="text-gray-700 hover:text-teal-600 transition-colors"
+              >
+                FAQ
+              </button>
+              <button
                 onClick={() => scrollToSection("contact")}
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                Contact
+                Contact Me
               </button>
             </div>
 
@@ -92,13 +104,13 @@ export default function TherapyWebsite() {
                   onClick={() => scrollToSection("home")}
                   className="block px-3 py-2 text-gray-700 hover:text-teal-600"
                 >
-                  Home
+                  Welcome
                 </button>
                 <button
                   onClick={() => scrollToSection("about")}
                   className="block px-3 py-2 text-gray-700 hover:text-teal-600"
                 >
-                  About
+                  About Me
                 </button>
                 <button
                   onClick={() => scrollToSection("services")}
@@ -107,10 +119,22 @@ export default function TherapyWebsite() {
                   Services
                 </button>
                 <button
+                  onClick={() => scrollToSection("resources")}
+                  className="block px-3 py-2 text-gray-700 hover:text-teal-600"
+                >
+                  Resources
+                </button>
+                <button
+                  onClick={() => scrollToSection("faq")}
+                  className="block px-3 py-2 text-gray-700 hover:text-teal-600"
+                >
+                  FAQ
+                </button>
+                <button
                   onClick={() => scrollToSection("contact")}
                   className="block px-3 py-2 text-gray-700 hover:text-teal-600"
                 >
-                  Contact
+                  Contact Me
                 </button>
               </div>
             </div>
@@ -124,19 +148,20 @@ export default function TherapyWebsite() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Compassionate Therapy for
-                <span className="text-teal-600 block">Mind & Soul</span>
+                Evidence-based treatment for
+                <span className="text-teal-600 block">insomnia, anxiety, and chronic pain</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Creating a safe space for healing, growth, and transformation through personalized therapeutic
-                approaches.
+                Welcome and thank you for visiting! Dr. Lisa Wright is a licensed clinical psychologist (PSY22786) that
+                offers individual and group therapy, pre-surgical evaluations, consultation, and workshops/talks
+                throughout California.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition-colors font-medium"
                 >
-                  Schedule Consultation
+                  Free 20-min Consultation
                 </button>
                 <button
                   onClick={() => scrollToSection("about")}
@@ -149,16 +174,31 @@ export default function TherapyWebsite() {
             <div className="flex-1 flex justify-center">
               <div className="relative">
                 <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl">
-                  <img
-                    src="/therapist-portrait.png"
-                    alt="Dr. Naomi Edelson"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/therapist-portrait.png" alt="Dr. Lisa Wright" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center">
                   <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center">
                     <span className="text-white text-2xl">✓</span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center lg:text-left">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg max-w-2xl mx-auto lg:mx-0">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Office Location</h3>
+              <div className="space-y-2 text-gray-600">
+                <p>35-C Avenida de Orinda</p>
+                <p>Orinda, CA 94563</p>
+                <p className="text-sm">(About 1 mile from the Orinda BART station)</p>
+                <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                  <p>
+                    <strong>Phone:</strong> (925) 297-5475
+                  </p>
+                  <p>
+                    <strong>Email:</strong> lisawrightphd@gmail.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -170,11 +210,7 @@ export default function TherapyWebsite() {
       <section id="about" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Dr. Naomi Edelson</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With over 15 years of experience in clinical psychology, I am dedicated to helping individuals navigate
-              life's challenges with compassion and expertise.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -185,34 +221,81 @@ export default function TherapyWebsite() {
             </div>
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">My Approach</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Dr. Wright is a licensed clinical psychologist in California that specializes in health and wellness
+                  who has worked in diverse medical settings for over 15 years. She has a Ph.D. and Master's degree in
+                  Clinical Psychology with an emphasis in Health Psychology from Arizona State University.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Dr. Wright trained at the APA-accredited VA Medical Center in San Diego and University of California,
+                  San Diego Healthcare System. She is committed to continual learning and staying abreast of advances in
+                  psychology and behavioral medicine.
+                </p>
                 <p className="text-gray-600 leading-relaxed">
-                  I believe in creating a warm, non-judgmental environment where clients feel safe to explore their
-                  thoughts and emotions. My integrative approach combines evidence-based therapies tailored to each
-                  individual's unique needs.
+                  Dr. Wright has a warm and compassionate approach, where she meets people where they are and helps them
+                  move toward where they want to be. She blends evidence-based approaches with humor and realism.
                 </p>
               </div>
+
               <div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Specializations</h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Advanced Training</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-teal-600 rounded-full mr-3"></span>
-                    Anxiety & Depression
+                    Cognitive-behavioral therapy (CBT)
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-teal-600 rounded-full mr-3"></span>
-                    Relationship Counseling
+                    Acceptance and commitment therapy (ACT)
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-teal-600 rounded-full mr-3"></span>
-                    Trauma & PTSD
+                    Pain Reprocessing Therapy
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-teal-600 rounded-full mr-3"></span>
-                    Life Transitions
+                    Stanford "Empowered Relief" program
                   </li>
                 </ul>
               </div>
+
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Life Challenges I Help With</h3>
+                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                  <ul className="space-y-1">
+                    <li>• Anxiety, worry, and stress</li>
+                    <li>• Insomnia</li>
+                    <li>• Chronic pain management</li>
+                    <li>• Depression</li>
+                    <li>• Life transitions</li>
+                    <li>• Work-related stress</li>
+                  </ul>
+                  <ul className="space-y-1">
+                    <li>• Chronic illness adjustment</li>
+                    <li>• Self-esteem issues</li>
+                    <li>• Caregiver stress</li>
+                    <li>• Trauma</li>
+                    <li>• Relationship issues</li>
+                    <li>• Women's Health</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 bg-gray-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Professional Organizations</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-600">
+              <div>
+                •{" "}
+                <a href="https://www.behavioralsleep.org/" className="text-teal-600 hover:underline">
+                  Society of Behavioral Sleep Medicine
+                </a>
+              </div>
+              <div>• Association for Behavioral and Cognitive Therapies (ABCT)</div>
+              <div>• The Association for Contextual Behavioral Science (ACBS)</div>
+              <div>• Northern California CBT Network</div>
+              <div>• American Psychological Association (APA), Division 38</div>
             </div>
           </div>
         </div>
@@ -222,41 +305,196 @@ export default function TherapyWebsite() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Therapeutic Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive mental health services designed to support your journey toward wellness and personal growth.
+              Evidence-based treatments tailored to your unique needs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                <span className="text-teal-600 text-2xl">👤</span>
+                <span className="text-teal-600 text-2xl">🛏️</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Individual Therapy</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">CBT-Insomnia</h3>
               <p className="text-gray-600 leading-relaxed">
-                One-on-one sessions focused on your personal goals, challenges, and growth in a confidential setting.
+                Cognitive Behavioral Therapy for Insomnia (CBT-I) is the gold standard treatment. Clients often see
+                significant progress within 4-8 sessions.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                <span className="text-teal-600 text-2xl">👥</span>
+                <span className="text-teal-600 text-2xl">🧠</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Couples Therapy</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Chronic Pain Therapy</h3>
               <p className="text-gray-600 leading-relaxed">
-                Strengthen your relationship through improved communication, conflict resolution, and deeper connection.
+                Using CBT, ACT, and Pain Reprocessing Therapy to help retrain the brain and break the cycle of chronic
+                pain.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
-                <span className="text-teal-600 text-2xl">🏠</span>
+                <span className="text-teal-600 text-2xl">🌙</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Family Therapy</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Nightmare Therapy</h3>
               <p className="text-gray-600 leading-relaxed">
-                Heal family dynamics and improve relationships through understanding and effective communication
-                strategies.
+                Imagery Rehearsal Therapy (IRT) to decrease intensity and frequency of nightmares and modify distressing
+                content.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                <span className="text-teal-600 text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">ACT Therapy</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Acceptance and Commitment Therapy using mindfulness to help you move toward your most important life
+                values.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                <span className="text-teal-600 text-2xl">📋</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Pre-Surgical Assessment</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Psychological assessments for bariatric surgery, organ transplantation, and chronic pain procedures.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                <span className="text-teal-600 text-2xl">🎤</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Workshops & Talks</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Speaking engagements on sleep improvement, stress management, chronic illness self-management, and more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <section id="resources" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Resources</h2>
+            <p className="text-xl text-gray-600">Helpful links and recommended reading</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Sleep Resources</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-teal-600 mb-2">Websites:</h4>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>
+                      •{" "}
+                      <a href="https://www.behavioralsleep.org/" className="hover:text-teal-600">
+                        Society of Behavioral Sleep Medicine
+                      </a>
+                    </li>
+                    <li>
+                      •{" "}
+                      <a href="https://aasm.org/" className="hover:text-teal-600">
+                        American Academy of Sleep Medicine
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-teal-600 mb-2">Articles:</h4>
+                  <ul className="space-y-2 text-gray-600 text-sm">
+                    <li>
+                      •{" "}
+                      <a
+                        href="https://www.acponline.org/acp-newsroom/acp-recommends-cognitive-behavioral-therapy-as-initial-treatment-for-chronic-insomnia"
+                        className="hover:text-teal-600"
+                      >
+                        CBT-I as First-Line Treatment
+                      </a>
+                    </li>
+                    <li>
+                      •{" "}
+                      <a href="http://www.apa.org/monitor/2017/10/cover-sleep.aspx" className="hover:text-teal-600">
+                        Sleep: The Third Pillar of Health
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Recommended Books</h3>
+              <div className="space-y-4 text-gray-600">
+                <div>
+                  <h4 className="font-semibold text-teal-600">Sleep:</h4>
+                  <ul className="space-y-1 text-sm">
+                    <li>• "Say Goodnight to Insomnia" by Gregg Jacobs, Ph.D.</li>
+                    <li>• "Overcoming Insomnia" by Jack Edinger & Colleen Carney</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-teal-600">Pain Management:</h4>
+                  <ul className="space-y-1 text-sm">
+                    <li>• "The Pain Survival Guide" by Dennis Turk & Frits Winter</li>
+                    <li>• "Living Beyond Your Pain" by Joanne Dahl & Tobias Lundgren</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-teal-600">ACT:</h4>
+                  <ul className="space-y-1 text-sm">
+                    <li>• "Get Out of Your Mind & Into Your Life" by Steven Hayes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">FAQ</h2>
+            <p className="text-xl text-gray-600">Frequently asked questions</p>
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">How much will this cost?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                My current rates are consistent with other licensed psychologists in the Bay Area. I work with your
+                insurance plan as an out-of-network provider and can offer billing statements for reimbursement. Many
+                private plans reimburse 50-100% of therapy costs. I accept check, cash, credit, or Lyra insurance.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">How do sessions work?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                The initial session focuses on reviewing your history and current goals. I work collaboratively to
+                create reasonable therapy goals. Sessions are approximately 50 minutes and typically occur weekly or
+                biweekly. There will be skills practice between sessions, and I offer monthly or booster sessions for
+                maintenance.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Will I be in therapy forever?</h3>
+              <p className="text-gray-600 leading-relaxed">
+                The short answer is no. Evidence-based treatments are designed to be effective within 8-12 sessions
+                typically. The goal is to teach you skills for a better life that you can implement independently.
+                During the initial intake, I can give you a better understanding of expected treatment length based on
+                your specific goals and concerns.
               </p>
             </div>
           </div>
@@ -267,9 +505,9 @@ export default function TherapyWebsite() {
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Me</h2>
             <p className="text-xl text-gray-600">
-              Ready to begin your journey? I'm here to support you every step of the way.
+              Finding a good fit with your therapist is important. I offer a free 20-minute phone consultation.
             </p>
           </div>
 
@@ -280,42 +518,33 @@ export default function TherapyWebsite() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <span className="w-6 h-6 text-teal-600 mr-3">📞</span>
-                    <span className="text-gray-600">(555) 123-4567</span>
+                    <span className="text-gray-600">(925) 297-5475</span>
                   </div>
                   <div className="flex items-center">
                     <span className="w-6 h-6 text-teal-600 mr-3">✉️</span>
-                    <span className="text-gray-600">dr.edelson@therapy.com</span>
+                    <span className="text-gray-600">lisawrightphd@gmail.com</span>
                   </div>
                   <div className="flex items-center">
                     <span className="w-6 h-6 text-teal-600 mr-3">📍</span>
                     <span className="text-gray-600">
-                      123 Wellness Ave, Suite 200
+                      35-C Avenida de Orinda
                       <br />
-                      City, State 12345
+                      Orinda, CA 94563
+                      <br />
+                      <span className="text-sm">(About 1 mile from Orinda BART)</span>
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Office Hours</h3>
-                <div className="space-y-2 text-gray-600">
-                  <div className="flex justify-between">
-                    <span>Monday - Thursday</span>
-                    <span>9:00 AM - 7:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Friday</span>
-                    <span>9:00 AM - 5:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 3:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
-                  </div>
+              <div className="bg-teal-50 p-6 rounded-2xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Available Services</h3>
+                <div className="space-y-2 text-gray-600 text-sm">
+                  <div>• In-person sessions in Orinda</div>
+                  <div>• Video telehealth (California residents)</div>
+                  <div>• Individual and group therapy</div>
+                  <div>• Pre-surgical evaluations</div>
+                  <div>• Consultation and workshops</div>
                 </div>
               </div>
             </div>
@@ -338,9 +567,16 @@ export default function TherapyWebsite() {
                   />
                 </div>
                 <div>
+                  <input
+                    type="tel"
+                    placeholder="Your Phone"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
                   <textarea
                     rows={4}
-                    placeholder="Your Message"
+                    placeholder="How can I help you?"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
                   ></textarea>
                 </div>
@@ -360,8 +596,8 @@ export default function TherapyWebsite() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Dr. Naomi Edelson</h3>
-            <p className="text-gray-400 mb-6">Licensed Clinical Psychologist</p>
+            <h3 className="text-2xl font-bold mb-4">Dr. Lisa Wright</h3>
+            <p className="text-gray-400 mb-6">Licensed Clinical Psychologist (PSY22786)</p>
             <div className="flex justify-center space-x-6 mb-8">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
@@ -370,10 +606,10 @@ export default function TherapyWebsite() {
                 Terms of Service
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Insurance
+                Insurance Information
               </a>
             </div>
-            <p className="text-gray-500 text-sm">© 2024 Dr. Naomi Edelson. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">© 2024 Dr. Lisa Wright. All rights reserved.</p>
           </div>
         </div>
       </footer>

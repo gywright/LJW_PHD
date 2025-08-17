@@ -108,7 +108,9 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   // Simulate API call delay
   setTimeout(() => {
-    alert("Thank you for your message! Dr. Edelson will get back to you within 24 hours.")
+    alert(
+      "Thank you for your message! Dr. Wright will get back to you within 24 hours to schedule your free consultation.",
+    )
     this.reset()
     submitButton.textContent = originalText
     submitButton.disabled = false
@@ -117,10 +119,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 // Button click handlers
 document.addEventListener("DOMContentLoaded", () => {
+  // Update navigation for new sections
+  const sections = ["home", "about", "services", "resources", "faq", "contact"]
+
   // Schedule consultation button
   const scheduleButtons = document.querySelectorAll(".btn-primary")
   scheduleButtons.forEach((button) => {
-    if (button.textContent.includes("Schedule")) {
+    if (button.textContent.includes("Consultation") || button.textContent.includes("Schedule")) {
       button.addEventListener("click", () => {
         scrollToSection("contact")
       })
