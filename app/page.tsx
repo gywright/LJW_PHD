@@ -220,7 +220,7 @@ export default function TherapyWebsite() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4">
-              <div className="w-full h-64 rounded-2xl overflow-hidden shadow-lg">
+              <div className="w-full rounded-2xl overflow-hidden shadow-lg h-[512px]">
                 <img
                   src="/office-couch.jpg"
                   alt="Comfortable therapy office with modern seating"
@@ -228,14 +228,14 @@ export default function TherapyWebsite() {
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="w-full h-32 rounded-xl overflow-hidden shadow-lg">
+                <div className="w-full rounded-xl overflow-hidden shadow-lg h-64">
                   <img
                     src="/office-plant.jpg"
                     alt="Peaceful therapy office corner with plant and certificates"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="w-full h-32 rounded-xl overflow-hidden shadow-lg">
+                <div className="w-full rounded-xl overflow-hidden shadow-lg h-64">
                   <img src="/office-patio.jpg" alt="Serene garden patio area" className="w-full h-full object-cover" />
                 </div>
               </div>
