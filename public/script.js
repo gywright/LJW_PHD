@@ -83,7 +83,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const formData = new FormData(this)
   const name = formData.get("name")
   const email = formData.get("email")
-  const phone = formData.get("phone")
+  const phone = formData.get("phone") || "Not provided"
   const message = formData.get("message")
 
   // Simple validation
@@ -99,22 +99,32 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     return
   }
 
-  // Simulate form submission
-  const submitButton = this.querySelector('button[type="submit"]')
-  const originalText = submitButton.textContent
+  const emailContent = `New Contact Form Submission
 
-  submitButton.textContent = "Sending..."
-  submitButton.disabled = true
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
 
-  // Simulate API call delay
-  setTimeout(() => {
-    alert(
-      "Thank you for your message! Dr. Wright will get back to you within 24 hours to schedule your free consultation.",
-    )
-    this.reset()
-    submitButton.textContent = originalText
-    submitButton.disabled = false
-  }, 2000)
+Message:
+${message}
+
+---
+Sent from Dr. Lisa Wright's website contact form`
+
+  const subject = encodeURIComponent(`New Contact Form Submission from ${name}`)
+  const body = encodeURIComponent(emailContent)
+  const mailtoLink = `mailto:wright.gene@gmail.com?subject=${subject}&body=${body}`
+
+  // Open email client
+  window.location.href = mailtoLink
+
+  // Show confirmation
+  alert(
+    "Your email client will open to send the message to Dr. Wright. If it doesn't open automatically, please call (925) 297-5475 directly.",
+  )
+
+  // Reset form
+  this.reset()
 })
 
 // Button click handlers

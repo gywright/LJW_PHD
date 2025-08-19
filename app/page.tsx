@@ -1,10 +1,13 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 
 export default function TherapyWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +22,42 @@ export default function TherapyWebsite() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
       setIsMenuOpen(false)
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      message: formData.get("message") as string,
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        alert(
+          "Thank you for your message! Dr. Wright will get back to you within 24 hours to schedule your free consultation.",
+        )
+        e.currentTarget.reset()
+      } else {
+        throw new Error("Failed to send message")
+      }
+    } catch (error) {
+      alert("Sorry, there was an error sending your message. Please try calling (925) 297-5475 directly.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -572,40 +611,48 @@ export default function TherapyWebsite() {
 
             <div className="bg-gray-50 p-8 rounded-2xl">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">Send a Message</h3>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Your Email"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                 </div>
                 <div>
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="Your Phone"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                 </div>
                 <div>
                   <textarea
+                    name="message"
                     rows={4}
                     placeholder="How can I help you?"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors font-medium"
+                  disabled={isSubmitting}
+                  className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
