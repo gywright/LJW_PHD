@@ -319,7 +319,7 @@ body {
 
 .main-office-image {
   width: 100%;
-  height: 16rem;
+  height: 32rem;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -338,7 +338,7 @@ body {
 }
 
 .small-image {
-  height: 8rem;
+  height: 16rem;
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
